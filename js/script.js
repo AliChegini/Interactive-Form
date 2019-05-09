@@ -36,3 +36,9 @@ function toggleFields() {
     $("#color").append($heartTheme)
   }
 }
+
+
+$(".group1, .group2").change(function() {
+  this.checked ? $("." + this.className).not(this).prop("disabled", true) : $("." + this.className).not(this).prop("disabled", false);
+  $('#flashMessage').slideDown().delay(2000).slideUp()
+})
