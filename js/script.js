@@ -40,5 +40,21 @@ function toggleFields() {
 
 $(".group1, .group2").change(function() {
   this.checked ? $("." + this.className).not(this).prop("disabled", true) : $("." + this.className).not(this).prop("disabled", false);
-  $('#flashMessage').slideDown().delay(2000).slideUp()
+  if (this.checked) {
+    $('#flashMessage').slideDown().delay(2000).slideUp()
+  }
+})
+
+$(".activities").change(function() {
+  console.log("clicking");
+
+  $(".activities").append("<p> Total cost: $100 </p>")
+  console.log($(input).attr('name'))
+
+
+
+  if (this.checked) {
+
+
+  }
 })
